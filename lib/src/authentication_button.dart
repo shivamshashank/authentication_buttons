@@ -5,15 +5,17 @@ import 'package:flutter/material.dart';
 class AuthenticationButton extends StatelessWidget {
   final AuthenticationMethod authenticationMethod;
   final ButtonSize buttonSize;
+  final bool showLoader;
 
   const AuthenticationButton({
     super.key,
     required this.authenticationMethod,
     this.buttonSize = ButtonSize.large,
+    this.showLoader = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return buttonSize == ButtonSize.small ? Container() : Container();
   }
 }

@@ -1,0 +1,29 @@
+name: Authentication Buttons CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Analyze and Format Package
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👀 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🐤 Setup Flutter
+        id: setup-flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.3'
+          channel: 'stable'
+
+      - name: 🚀 Analyze and Format
+        id: analyze-and-format
+        run: |
+          flutter pub get -v .
+          flutter analyze --fatal-infos .
+          dart format .

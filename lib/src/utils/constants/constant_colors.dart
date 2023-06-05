@@ -5,7 +5,7 @@ class ConstantColors {
   static const Color appleColor = Color(0xFF000000);
   static const Color microsoftColor = Color(0xFF2F2F2F);
   static const Color facebookColor = Color(0xFF1877F2);
-  static const Color snapchatColor = Color(0xFFFFFC00);
+  static const Color redditColor = Color(0xFFFF4500);
   static const Color twitterColor = Color(0xFF1D9BF0);
   static const Color linkedinColor = Color(0xFF0A66C2);
   static const Color githubColor = Color(0xFF191717);

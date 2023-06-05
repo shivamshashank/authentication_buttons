@@ -1,7 +1,16 @@
 name: authentication_buttons
 description: Flutter Authentication Buttons Package
 version: 0.0.1
-homepage:
+homepage: https://github.com/Pierre2tm/dimensions_theme
+repository: https://github.com/Pierre2tm/dimensions_theme
+issue_tracker: https://github.com/Pierre2tm/dimensions_theme/issues
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
@@ -14,15 +23,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 flutter:
 
-  # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  assets:
+    - lib/assets/images/

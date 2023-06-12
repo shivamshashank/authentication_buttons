@@ -9,12 +9,14 @@ import 'package:flutter/material.dart';
 
 class AuthenticationButton extends StatelessWidget {
   final AuthenticationMethod authenticationMethod;
+  final VoidCallback onPressed;
   final ButtonSize buttonSize;
   final bool showLoader;
 
   const AuthenticationButton({
     super.key,
     required this.authenticationMethod,
+    required this.onPressed,
     this.buttonSize = ButtonSize.large,
     this.showLoader = false,
   });
@@ -22,52 +24,97 @@ class AuthenticationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return buttonSize == ButtonSize.small
-        ? Container()
-        : Container(
-            width: min(
-              ConstantDimensions.screenWidth(context) * 0.9,
-              ConstantDimensions.buttonWidth,
-            ),
-            decoration: BoxDecoration(
-              color: authenticationMethod.color,
-              borderRadius: BorderRadius.circular(
-                ConstantDimensions.medium,
-              ),
-            ),
-            padding: const EdgeInsets.all(
-              ConstantDimensions.small,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  height: ConstantDimensions.buttonHeight,
+        ? showLoader
+            ? Center(
+                child: CircularProgressIndicator(
+                  color: authenticationMethod.color,
+                ),
+              )
+            : GestureDetector(
+                onTap: onPressed,
+                child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: authenticationMethod.color,
                     borderRadius: BorderRadius.circular(
-                      ConstantDimensions.small,
+                      ConstantDimensions.medium,
                     ),
                   ),
                   padding: const EdgeInsets.all(
-                    ConstantDimensions.medium,
+                    ConstantDimensions.small,
                   ),
-                  child: Image.asset(
-                    ConstantStrings.imagePath(
-                      authenticationMethod.name,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Text(
-                    '${ConstantStrings.continueWith} ${authenticationMethod.name.toCapitalized()}',
-                    style: const TextStyle(
-                      fontSize: 20,
+                  child: Container(
+                    height: ConstantDimensions.buttonHeight,
+                    decoration: BoxDecoration(
                       color: Colors.white,
+                      borderRadius: BorderRadius.circular(
+                        ConstantDimensions.small,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
+                    padding: const EdgeInsets.all(
+                      ConstantDimensions.medium,
+                    ),
+                    child: Image.asset(
+                      ConstantStrings.imagePath(
+                        authenticationMethod.name,
+                      ),
+                    ),
                   ),
                 ),
-              ],
+              )
+        : GestureDetector(
+            onTap: showLoader ? () {} : onPressed,
+            child: Container(
+              width: min(
+                ConstantDimensions.screenWidth(context) * 0.9,
+                ConstantDimensions.buttonWidth,
+              ),
+              decoration: BoxDecoration(
+                color: authenticationMethod.color,
+                borderRadius: BorderRadius.circular(
+                  ConstantDimensions.medium,
+                ),
+              ),
+              padding: const EdgeInsets.all(
+                ConstantDimensions.small,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: ConstantDimensions.buttonHeight,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(
+                        ConstantDimensions.small,
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(
+                      ConstantDimensions.medium,
+                    ),
+                    child: Image.asset(
+                      ConstantStrings.imagePath(
+                        authenticationMethod.name,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: showLoader
+                        ? const Center(
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                            ),
+                          )
+                        : Text(
+                            '${ConstantStrings.continueWith} ${authenticationMethod.name.toCapitalized()}',
+                            style: const TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                  ),
+                ],
+              ),
             ),
           );
   }

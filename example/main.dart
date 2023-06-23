@@ -6,12 +6,14 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       const MaterialApp(
         title: 'Authentication Buttons',
-        home: _AuthenticationButtonsExample(),
+        home: AuthenticationButtonsExample(),
       ),
     );
 
-class _AuthenticationButtonsExample extends StatelessWidget {
-  const _AuthenticationButtonsExample();
+class AuthenticationButtonsExample extends StatelessWidget {
+  const AuthenticationButtonsExample({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

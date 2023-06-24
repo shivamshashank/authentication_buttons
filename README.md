@@ -63,9 +63,9 @@ Below is the example with all arguments supplied:
 ```
 
 ## Screenshots
-![Gif](screenshots/demo.gif)
-![Image](screenshots/screenshot_1.png)
-![Image](screenshots/screenshot_2.png)
+![Gif](./screenshots/demo.gif?raw=true)
+![Image](./screenshots/screenshot_1.png?raw=true)
+![Image](./screenshots/screenshot_2.png?raw=true)
 
 ## Example
 

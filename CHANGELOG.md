@@ -1,3 +1,7 @@
+## 0.0.3
+- `README.md` file updated
+- `Environment SDK` version updated
+
 ## 0.0.2
 - pubspec.yaml `description` updated
 - Examples added

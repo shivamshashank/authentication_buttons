@@ -63,9 +63,9 @@ Below is the example with all arguments supplied:
 ```
 
 ## Screenshots
-![Gif](./screenshots/demo.gif?raw=true)
-![Image](./screenshots/screenshot_1.png?raw=true)
-![Image](./screenshots/screenshot_2.png?raw=true)
+![demo](https://github.com/shivamshashank/authentication_buttons/assets/60516175/acf4afd7-3772-4671-b056-7fb30b8637fa)
+![screenshot_1](https://github.com/shivamshashank/authentication_buttons/assets/60516175/93045dd6-baf6-4c25-956f-5370048cc466)
+![screenshot_2](https://github.com/shivamshashank/authentication_buttons/assets/60516175/6803e2b5-ba30-4a04-a3a5-3bab7dfb3fbf)
 
 ## Example
 

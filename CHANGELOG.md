@@ -1,3 +1,7 @@
+## 0.0.4
+- `flutter_lints` version upgraded
+- `More Documentation` added
+
 ## 0.0.3
 - `README.md` file updated
 - `Environment SDK` version updated

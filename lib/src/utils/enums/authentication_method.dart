@@ -2,6 +2,10 @@ import 'package:authentication_buttons/src/utils/constants/constant_colors.dart'
 import 'package:authentication_buttons/src/utils/constants/constant_strings.dart';
 import 'package:flutter/material.dart';
 
+/// Enums are useful for defining a limited number of possible states or options for a variable,
+/// providing better type safety and readability in your code.
+
+/// Here we are defining 12 types of buttons
 enum AuthenticationMethod {
   google(
     color: ConstantColors.googleColor,

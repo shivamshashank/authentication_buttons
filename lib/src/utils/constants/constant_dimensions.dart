@@ -10,11 +10,13 @@ class ConstantDimensions {
   static const double buttonWidth = 372.0;
   static const double buttonHeight = 48.0;
 
+  /// It returns the width of the screen as a `double` value.
   static double screenWidth(
     BuildContext context,
   ) =>
       MediaQuery.of(context).size.width;
 
+  /// It returns the height of the screen as a `double` value.
   static double screenHeight(
     BuildContext context,
   ) =>

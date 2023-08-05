@@ -7,12 +7,16 @@ import 'package:authentication_buttons/src/utils/enums/button_size.dart';
 import 'package:authentication_buttons/src/utils/extensions/string_casing_extension.dart';
 import 'package:flutter/material.dart';
 
+/// It is a widget that doesn't have any mutable state. Once created, a `StatelessWidget` remains unchanged throughout its lifetime.
+/// This means that the widget's properties (the ones defined in its constructor) are final and cannot be changed after the widget is built.
 class AuthenticationButton extends StatelessWidget {
   final AuthenticationMethod authenticationMethod;
   final VoidCallback onPressed;
   final ButtonSize buttonSize;
   final bool showLoader;
 
+  /// In Order to create the AuthenticationButton object, you need to pass [authenticationMethod] and [onPressed] parameters.
+  /// Whereas, [buttonSize] and [showLoader] is optional.
   const AuthenticationButton({
     super.key,
     required this.authenticationMethod,
@@ -24,6 +28,8 @@ class AuthenticationButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return buttonSize == ButtonSize.small
+
+        /// For [ButtonSize.large], we are showing loader inside a button
         ? showLoader
             ? Center(
                 child: CircularProgressIndicator(
@@ -35,6 +41,8 @@ class AuthenticationButton extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: authenticationMethod.color,
+
+                    /// Here, we are defining [borderRadius] to make button look circular
                     borderRadius: BorderRadius.circular(
                       ConstantDimensions.medium,
                     ),
@@ -91,6 +99,8 @@ class AuthenticationButton extends StatelessWidget {
                     padding: const EdgeInsets.all(
                       ConstantDimensions.medium,
                     ),
+
+                    /// Showing image of AuthenticationMethod (For ex -> Google, Facebook)
                     child: Image.asset(
                       ConstantStrings.imagePath(
                         authenticationMethod.name,

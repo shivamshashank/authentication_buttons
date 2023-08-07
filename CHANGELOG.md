@@ -1,3 +1,7 @@
+## 0.0.5
+- Code Refactoring
+- `More Documentation` added
+
 ## 0.0.4
 - `flutter_lints` version upgraded
 - `More Documentation` added

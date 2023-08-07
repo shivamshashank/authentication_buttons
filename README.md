@@ -14,7 +14,7 @@ Add the dependency in pubsec.yaml file.
   dependencies:
     flutter:
       sdk: flutter
-    authentication_buttons: 0.0.2
+    authentication_buttons: 0.0.5
 ```
 
 ## How to Use

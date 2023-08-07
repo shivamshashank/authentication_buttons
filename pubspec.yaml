@@ -1,6 +1,6 @@
 name: authentication_buttons
 description: To effortlessly add social media login buttons to any flutter app, use the Authentication Buttons flutter package.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/shivamshashank/authentication_buttons
 repository: https://github.com/shivamshashank/authentication_buttons
 issue_tracker: https://github.com/shivamshashank/authentication_buttons/issues

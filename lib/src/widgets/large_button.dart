@@ -8,6 +8,7 @@ import 'package:authentication_buttons/src/utils/extensions/string_casing_extens
 import 'package:authentication_buttons/src/utils/constants/constant_dimensions.dart';
 import 'package:authentication_buttons/src/utils/constants/constant_strings.dart';
 
+/// Here, [LargeButton] class requires 3 parameters -> [authenticationMethod, onPressed, showLoader]
 class LargeButton extends StatelessWidget {
   const LargeButton({
     super.key,
@@ -25,6 +26,8 @@ class LargeButton extends StatelessWidget {
     return GestureDetector(
       onTap: showLoader ? () {} : onPressed,
       child: Container(
+        /// Here we are using [min] math Function to make the width of the button responsive
+        /// such that it can work on larger screen as well (ex -> Desktop)
         width: min(
           ConstantDimensions.screenWidth(context) * 0.9,
           ConstantDimensions.buttonWidth,

@@ -4,6 +4,7 @@ import 'package:authentication_buttons/src/utils/enums/authentication_method.dar
 import 'package:authentication_buttons/src/widgets/progress_loader.dart';
 import 'package:flutter/material.dart';
 
+/// Here, [SmallButton] class requires 3 parameters -> [authenticationMethod, onPressed, showLoader]
 class SmallButton extends StatelessWidget {
   const SmallButton({
     super.key,
